@@ -1,0 +1,86 @@
+
+.content-container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+input:focus {
+    border: 1px solid #24e9ff !important;
+}
+
+.hide {
+   position: absolute !important;
+   top: -9999px !important;
+   left: -9999px !important;
+}
+
+.no-padding {
+    padding: 0px!important;
+}
+
+.centered {
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+.event-box {
+    width: 95%;
+    background-color: #46a6c3;
+    border-radius: 4px;
+    padding: 10px;
+    margin:0 auto;
+    margin-bottom: 20px;
+}
+
+.black-text {
+    color: black;
+}
+
+.filter-btn {
+    width: 170px;
+    margin: 10px;
+    padding: 5px !important;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+
+
+.event-panel {
+    padding: 5px;
+    border-radius: 0 !important;
+    min-height: 190px;
+    transition: all 0.5s ease;
+}
+
+.padding-5 {
+    padding: 5px;
+}
+.no-round {
+    border-radius: 0 !important;
+}
+
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+     .event-box {
+         width: 100%;
+     }
+}
+
+.jumbotron {
+    transition: all 0.5s ease;
+}

@@ -1,0 +1,34 @@
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 no-padding">
+    <div class="event-box">
+       <h3 class="well">{{ panel.formatName(event.name) }}</h3>
+       <ul class="nav nav-tabs centered">
+          <li ng-class="{ active: panel.isSelected(1) }">
+              <a href ng-click="panel.setTab(1)">Description</a>
+          </li>
+          <li ng-class="{ active: panel.isSelected(2) }">
+              <a href ng-click="panel.setTab(2)">Participants</a>
+          </li>
+          <li ng-class="{ active: panel.isSelected(3) }">
+              <a href ng-click="panel.setTab(3)">Map</a>
+          </li>
+       </ul>
+       <event-description ng-show="panel.isSelected(1)"></event-description>
+       <div class="panel event-panel" ng-show="panel.isSelected(2)">
+            <h4>Participants: {{ event.participants.length }}/{{ event.capacity }}</h4>
+            <div ng-repeat="user in event.participants">
+                <p>{{ user.username }}: {{ user.rating }}</p>
+            </div>
+       </div>
+       <div class="panel event-panel" ng-show="panel.isSelected(3)">
+            <h4>Map</h4>
+            <p>Coordinates: {{ event.location }}</p>
+       </div>
+       <div class="btn-group centered">
+           <button type="button" class="btn btn-danger" ng-click="panel.setShown(false)">
+               <span class="fa fa-eye-slash"></span> Hide
+           </button>
+           <button type="button" class="btn btn-warning"><span class="fa fa-eye"></span> Watch</button>
+           <button type="button" class="btn btn-success"><span class="fa fa-trophy"></span> Register</button>
+       </div>
+    </div>
+</div>
