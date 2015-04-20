@@ -1,23 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <h2>Filters:</h2>
-
-    <div>
-        <h3>Sports:</h3>
-        <button ng-repeat="sport in sportList" class="btn filter-btn"
-                ng-class="!isSportFiltered(sport) ? 'btn-success' : 'btn-warning'"
-                ng-click="toggleFilter(sport)">
-            <strong>{{ sport }}</strong>
-            <span class="fa right" ng-class="isSportFiltered(sport) ? 'fa-square-o' : 'fa-check-square-o'"></span>
-        </button>
-    </div>
-    <div>
-        <h3>Times:</h3>
-
-    </div>
-    <div>
-        <h3>Distance:</h3>
-    </div>
+    <filter-category-selector></filter-category-selector>
     <button class="btn btn-info" ng-click="removeAllFilters()">
         Clear Filters
     </button>

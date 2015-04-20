@@ -1,0 +1,64 @@
+<div class="container">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default"> <!-- START OF SPORTS -->
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            <i class="fa fa-futbol-o"></i> Sports</a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <ul>
+                            <li ng-repeat="sport in sportList"> <!-- DO A LOOOOOOOOP -->
+                                <!-- PUT SPORT BUTTONS HERE -->
+                                <button class="btn filter-btn"
+                                        ng-class="!isSportFiltered(sport) ? 'btn-success' : 'btn-warning'"
+                                        ng-click="toggleFilter(sport)">
+                                    <strong>{{ sport }}</strong>
+                                    <span class="fa right" ng-class="isSportFiltered(sport) ? 'fa-square-o' : 'fa-check-square-o'"></span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- END OF SPORTS -->
+            <div class="panel panel-default"> <!-- START OF TIMES -->
+                <div class="panel-heading">
+                    <h4 id="time-slider" class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            <span class="fa fa-clock-o"></span> Times</a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li> <!-- DO A LOOOOOOP -->
+                                <!-- PUT TIME SELECTORS HERE -->
+                                <h6>Something</h6>
+                                <div id="slider"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- END OF TIMES -->
+            <div class="panel panel-default"> <!-- START OF DISTANCES -->
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            <span class="fa fa-bullseye"></span> Distances</a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li> <!-- DO A LOOOOOOP -->
+                                <!--TODO: PUT DISTANCE SELECTORS HERE -->
+                                <h6>Something Else</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- END OF DISTANCES -->
+        </div> <!-- END OF ACCORDION -->
+</div>

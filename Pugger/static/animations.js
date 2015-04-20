@@ -23,6 +23,14 @@ function incHeight(elementId, hiddenId) {
     hidden.toggleClass('hidden');
 }
 
-for(var i=1; i < 2; i++) {
-    $('#button' + i).click(incHeight('#panelBody'+ i, '#panelForm'+i));
-}
+var toggleFilter = function() {
+    //e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+};
+
+//$(document).ready(function() {
+//    $("#filter-toggle").click(function(e) {
+//
+//    });
+//});
+

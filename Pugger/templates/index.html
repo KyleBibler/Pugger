@@ -1,22 +1,21 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<body xmlns="http://www.w3.org/1999/html">
     <div class="content-container"  ng-controller="EventFilter">
-        <div class="jumbotron">
-            <div class="centered">
-                <h1>Pugger</h1>
-                <p>Pugger is a site...</p>
-            </div>
-        </div>
-        <filter-panel></filter-panel>
-        <div ng-controller="EventController">
-            <div class="row-fluid no-padding"
-                 ng-repeat="event in events | orderBy:['timeStart[0]', 'timeStart[1]']">
-                <event-panel ng-hide="isSportFiltered(event.sport)"></event-panel>
+        <div id="wrapper">
+            <filter-panel id="sidebar-wrapper"></filter-panel>
+            <div id="page-content-wrapper" ng-controller="EventController">
+                <div class="jumbotron">
+                    <div class="centered">
+                        <h1>Pugger</h1>
+                        <p>Pugger is a site that helps you find, join, and rate pick up groups for sports in your area</p>
+                    </div>
+                </div>
+                <div class="row-fluid no-padding"
+                     ng-repeat="event in events | orderBy:['timeStart[0]', 'timeStart[1]']">
+                    <event-panel ng-hide="isSportFiltered(event.sport)"></event-panel>
+                </div>
             </div>
         </div>
     </div>
-
-</body>
 {% endblock %}

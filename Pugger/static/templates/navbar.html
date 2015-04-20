@@ -1,5 +1,5 @@
 <div>
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -20,6 +20,7 @@
                   data-target=".bs-example-modal-sm" ng-click="navCtrl.setPanel('register')">Sign Up</button>
           <button id="sign-in" class="btn btn-info navbar-btn" data-toggle="modal"
                   data-target=".bs-example-modal-sm" ng-click="navCtrl.setPanel('login')">Sign In</button>
+          <button id="filter-toggle" class="btn btn-warning navbar-btn" onclick="toggleFilter()">Show/Hide Filters</button>
           <form class="navbar-form navbar-right" role="search">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Event/People Search">

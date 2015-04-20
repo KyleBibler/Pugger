@@ -97,6 +97,13 @@ app.directive('filterPanel', function() {
     }
 });
 
+app.directive('filterCategorySelector', function() {
+    return {
+        restrict: 'E',
+        templateUrl: '../static/templates/accordionMenu.html'
+    }
+});
+
 app.controller('EventController', ['$http', '$scope', function ($http, $scope) {
     $scope.events = [];
 

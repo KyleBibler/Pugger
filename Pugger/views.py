@@ -1,13 +1,16 @@
 from flask import *
 import os
 #from flask_login import login_required, logout_user, login_user, current_user, LoginManager
-from models import db, User, Event
+from models import db, User, Event, init_db
 
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '123456790'
 db_session = db.session
 
+@app.route('/init-events')
+def init():
+    init_db()
 
 @app.route('/')
 def index():

@@ -25,6 +25,7 @@ def dump_datetime(value):
 
 
 def init_db():
+    db.drop_all()
     db.create_all()
     admin = User('admin', 'email@email.com', 'password')
     user1 = User('john', 'john@email.com', 'password')
@@ -46,7 +47,7 @@ def populate_events():
     for i in range(0, 100):
         month = randint(date.today().month, date.today().month + 2)
         day = randint(1, 28)
-        hour = randint(0, 23)
+        hour = randint(7, 21)
         date_string = ("%r %r %r %r:00" % (day, month, date.today().year, hour))
         time_start = datetime.strptime(date_string, '%d %m %Y %H:%M')
         sport = sport_list[randint(0, len(sport_list)-1)]
@@ -158,3 +159,7 @@ class Event(db.Model):
         for user in self.participants:
             users += [user.serialize()]
         return users
+
+
+if __name__ == '__main__':
+    init_db()
